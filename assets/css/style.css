@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/heic1806b_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    overflow:hidden;
+}
+.container{
+    display:flex;
+}
+.container .panel{
+    position:relative;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin:10px;
+    height:90vh;
+    width:150px;
+    border-radius: 80px;
+    border:1px solid #fff;
+    flex:1;
+    cursor: pointer;
+    transition: flex 0.6s ease-in-out;
+}
+.container .panel.hubble h3{
+    top:10px;
+}
+.container .panel h3{
+    position:absolute;
+    bottom:10px;
+    left:80px;
+    color:#fff;
+    opacity: 0;
+}
+.container .panel.active{
+    flex:9;
+    width:1100px;
+}
+.container .panel.active h3{
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out 0.5s;
+}
